@@ -1,0 +1,43 @@
+version: "3.9"
+services:
+
+  mariadb:
+    hostname: mariadb
+    image: mariadb:latest
+    ports:
+      - "3306:3306"
+    networks:
+      - lab
+    volumes:
+      - ./scripts/persona_ddl_maria.sql:/docker-entrypoint-initdb.d/persona_ddl_maria.sql:ro
+      - ./scripts/persona_dml_maria.sql:/docker-entrypoint-initdb.d/persona_dml_maria.sql:ro
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+
+
+  mongodb:
+    hostname: mongodb
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    networks:
+      - lab
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+      MONGO_INITDB_DATABASE: prueba_db
+    volumes:
+      - ./scripts/persona_ddl_mongo.js:/docker-entrypoint-initdb.d/persona_ddl_mongo.js:ro
+      - ./scripts/persona_dml_mongo.js:/docker-entrypoint-initdb.d/persona_dml_mongo.js:ro
+
+  app:
+    hostname: app
+    build: .
+    networks:
+      - lab
+    ports:
+      - "8080:8080"
+
+networks:
+  lab:
+    driver: bridge

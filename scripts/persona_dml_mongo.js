@@ -1,4 +1,6 @@
-use prueba_db
+db = new Mongo().getDB("persona_db");
+
+db.createCollection('persona', { capped: false });
 
 db.persona.insertMany([
 	{
