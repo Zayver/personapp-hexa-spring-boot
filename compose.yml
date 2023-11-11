@@ -5,14 +5,14 @@ services:
     hostname: mariadb
     image: mariadb:latest
     ports:
-      - "3306:3306"
+      - "3307:3306"
     networks:
       - lab
     volumes:
       - ./scripts/persona_ddl_maria.sql:/docker-entrypoint-initdb.d/persona_ddl_maria.sql:ro
       - ./scripts/persona_dml_maria.sql:/docker-entrypoint-initdb.d/persona_dml_maria.sql:ro
     environment:
-      MARIADB_ROOT_PASSWORD: root
+      MARIADB_ROOT_PASSWORD: example
 
 
   mongodb:
@@ -30,13 +30,22 @@ services:
       - ./scripts/persona_ddl_mongo.js:/docker-entrypoint-initdb.d/persona_ddl_mongo.js:ro
       - ./scripts/persona_dml_mongo.js:/docker-entrypoint-initdb.d/persona_dml_mongo.js:ro
 
-  app:
-    hostname: app
-    build: .
+  rest:
+    hostname: rest
+    build:
+      dockerfile: Dockerfile
     networks:
       - lab
     ports:
       - "8080:8080"
+
+  cli:
+    hostname: cli
+    build:
+      dockerfile: Dockerfile.cli
+    networks:
+      - lab
+
 
 networks:
   lab:

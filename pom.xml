@@ -18,7 +18,7 @@
 		<revision>0.0.1-SNAPSHOT</revision>
 		<global.java.version>11</global.java.version>
 		<global.springframework.boot.version>3.1.5</global.springframework.boot.version>
-		<global.springframework.version>5.3.27</global.springframework.version>
+		<global.springframework.version>6.0.13</global.springframework.version>
 	</properties>
 	<licenses>
 		<license>

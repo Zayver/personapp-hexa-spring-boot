@@ -1,6 +1,6 @@
 package co.edu.javeriana.as.personapp.model.response;
 
-import co.edu.javeriana.as.personapp.model.request.PersonaRequest;
+import co.edu.javeriana.as.personapp.model.request.persona.PersonaRequest;
 
 public class PersonaResponse extends PersonaRequest{
 	
