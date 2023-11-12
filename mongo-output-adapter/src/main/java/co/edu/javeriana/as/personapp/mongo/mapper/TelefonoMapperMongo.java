@@ -14,7 +14,6 @@ public class TelefonoMapperMongo {
 
 	@Autowired
 	private PersonaMapperMongo personaMapperMongo;
-
 	public TelefonoDocument fromDomainToAdapter(Phone phone) {
 		TelefonoDocument telefonoDocument = new TelefonoDocument();
 		telefonoDocument.setId(phone.getNumber());

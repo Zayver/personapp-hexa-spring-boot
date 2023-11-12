@@ -1,13 +1,11 @@
 package co.edu.javeriana.as.personapp.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
+import lombok.*;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Phone {
 	@NonNull
 	private String number;

@@ -9,7 +9,7 @@ import co.edu.javeriana.as.personapp.mapper.PersonaMapperRest;
 import co.edu.javeriana.as.personapp.model.request.persona.DeletePersonaRequest;
 import co.edu.javeriana.as.personapp.model.request.persona.GetPersonaRequest;
 import co.edu.javeriana.as.personapp.model.request.persona.PersonaRequest;
-import co.edu.javeriana.as.personapp.model.response.PersonaResponse;
+import co.edu.javeriana.as.personapp.model.response.persona.PersonaResponse;
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
 import org.springframework.beans.factory.annotation.Autowired;

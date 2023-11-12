@@ -1,20 +1,17 @@
 package co.edu.javeriana.as.personapp.mariadb.adapter;
 
-import java.util.List;
-
-import java.util.stream.Collectors;
-
-import jakarta.transaction.Transactional;
-
-import org.springframework.beans.factory.annotation.Autowired;
-
 import co.edu.javeriana.as.personapp.application.port.out.PersonOutputPort;
 import co.edu.javeriana.as.personapp.common.annotations.Adapter;
 import co.edu.javeriana.as.personapp.domain.Person;
 import co.edu.javeriana.as.personapp.mariadb.entity.PersonaEntity;
-import co.edu.javeriana.as.personapp.mariadb.mapper.PersonaMapperMaria;
+import co.edu.javeriana.as.personapp.mariadb.mapper.PersonaMapper;
 import co.edu.javeriana.as.personapp.mariadb.repository.PersonaRepositoryMaria;
+import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Adapter("personOutputAdapterMaria")
@@ -25,7 +22,7 @@ public class PersonOutputAdapterMaria implements PersonOutputPort {
 	private PersonaRepositoryMaria personaRepositoryMaria;
 
 	@Autowired
-	private PersonaMapperMaria personaMapperMaria;
+	private PersonaMapper personaMapperMaria;
 
 	@Override
 	public Person save(Person person) {

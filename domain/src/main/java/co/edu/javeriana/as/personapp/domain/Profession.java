@@ -15,7 +15,7 @@ import lombok.ToString;
 @RequiredArgsConstructor
 public class Profession {
 	@NonNull
-	private Integer identification;
+	private Integer id;
 	@NonNull
 	private String name;
 	private String description;

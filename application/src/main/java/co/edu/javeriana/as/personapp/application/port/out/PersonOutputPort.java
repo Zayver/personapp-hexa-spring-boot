@@ -7,8 +7,8 @@ import co.edu.javeriana.as.personapp.domain.Person;
 
 @Port
 public interface PersonOutputPort {
-	public Person save(Person person);
-	public Boolean delete(Integer identification);
-	public List<Person> find();
-	public Person findById(Integer identification);
+	Person save(Person person);
+	Boolean delete(Integer identification);
+	List<Person> find();
+	Person findById(Integer identification);
 }

@@ -4,7 +4,7 @@ import co.edu.javeriana.as.personapp.adapter.PersonaInputAdapterRest;
 import co.edu.javeriana.as.personapp.model.request.persona.DeletePersonaRequest;
 import co.edu.javeriana.as.personapp.model.request.persona.GetPersonaRequest;
 import co.edu.javeriana.as.personapp.model.request.persona.PersonaRequest;
-import co.edu.javeriana.as.personapp.model.response.PersonaResponse;
+import co.edu.javeriana.as.personapp.model.response.persona.PersonaResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -55,8 +55,5 @@ public class PersonaControllerV1 {
 		log.info("Obteniendo la persona con id {} en el controller del api", request.getId());
 		return personaInputAdapterRest.getOnePerson(request);
 	}
-
-
-
 
 }
