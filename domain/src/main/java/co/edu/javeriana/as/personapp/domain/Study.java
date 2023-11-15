@@ -12,7 +12,8 @@ import lombok.RequiredArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @RequiredArgsConstructor
-public class Study {
+public class
+Study {
 	@NonNull
 	private Person person;
 	@NonNull

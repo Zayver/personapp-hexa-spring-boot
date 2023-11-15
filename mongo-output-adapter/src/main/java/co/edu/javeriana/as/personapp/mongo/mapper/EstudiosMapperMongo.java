@@ -24,7 +24,7 @@ public class EstudiosMapperMongo {
 
 	public EstudiosDocument fromDomainToAdapter(Study study) {
 		EstudiosDocument estudio = new EstudiosDocument();
-		estudio.setId(validateId(study.getPerson().getIdentification(), study.getProfession().getIdentification()));
+		estudio.setId(validateId(study.getPerson().getIdentification(), study.getProfession().getId()));
 		estudio.setPrimaryPersona(validatePrimaryPersona(study.getPerson()));
 		estudio.setPrimaryProfesion(validatePrimaryProfesion(study.getProfession()));
 		estudio.setFecha(validateFecha(study.getGraduationDate()));

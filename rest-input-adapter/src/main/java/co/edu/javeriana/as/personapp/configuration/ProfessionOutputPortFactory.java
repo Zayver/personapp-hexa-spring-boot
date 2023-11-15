@@ -12,11 +12,11 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ProfessionOutputPortFactory {
     @Autowired
-    @Qualifier("phoneOutputAdapterMaria")
+    @Qualifier("professionOutputAdapterMaria")
     private ProfessionOutputPort professionOutputPortMaria;
 
     @Autowired
-    @Qualifier("phoneOutputAdapterMongo")
+    @Qualifier("professionOutputAdapterMongo")
     private ProfessionOutputPort professionOutputPortMongo;
 
     public ProfessionInputPort getProfessionOutputPort(String dbOption) throws InvalidOptionException {

@@ -4,12 +4,16 @@ import java.io.Serializable;
 import jakarta.persistence.Basic;
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
+import lombok.Builder;
+import lombok.Data;
 
 /**
  *
  * @author aasanchez
  */
 @Embeddable
+@Data
+@Builder
 public class EstudiosEntityPK implements Serializable {
 
 	/**

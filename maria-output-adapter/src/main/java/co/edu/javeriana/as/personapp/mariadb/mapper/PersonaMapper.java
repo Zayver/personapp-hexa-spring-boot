@@ -10,7 +10,8 @@ import org.mapstruct.Mapping;
 
 @Mapper(componentModel = "spring",
         uses = {
-            TelefonoMapper.class
+            TelefonoMapper.class,
+            EstudiosMapper.class
         }
 )
 public interface PersonaMapper {

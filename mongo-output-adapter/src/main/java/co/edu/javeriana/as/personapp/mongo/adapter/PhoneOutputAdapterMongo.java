@@ -7,13 +7,15 @@ import co.edu.javeriana.as.personapp.domain.Phone;
 import co.edu.javeriana.as.personapp.mongo.document.TelefonoDocument;
 import co.edu.javeriana.as.personapp.mongo.mapper.TelefonoMapperMongo;
 import co.edu.javeriana.as.personapp.mongo.repository.PhoneRepositoryMongo;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-@Adapter
+@Slf4j
+@Adapter("phoneOutputAdapterMongo")
 public class PhoneOutputAdapterMongo implements PhoneOutputPort {
     @Autowired
     private PhoneRepositoryMongo phoneRepositoryMongo;
