@@ -5,6 +5,7 @@ import co.edu.javeriana.as.personapp.model.request.persona.DeletePersonaRequest;
 import co.edu.javeriana.as.personapp.model.request.persona.GetPersonaRequest;
 import co.edu.javeriana.as.personapp.model.request.persona.PersonaRequest;
 import co.edu.javeriana.as.personapp.model.response.persona.PersonaResponse;
+import jakarta.validation.constraints.NotBlank;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -26,7 +27,7 @@ public class PersonaControllerV1 {
 	
 	@ResponseBody
 	@GetMapping(path = "/{database}", produces = MediaType.APPLICATION_JSON_VALUE)
-	public List<PersonaResponse> personas(@Valid @PathVariable String database) {
+	public List<PersonaResponse> personas(@PathVariable String database) {
 		log.info("Into personas REST API");
 			return personaInputAdapterRest.historial(database.toUpperCase());
 	}

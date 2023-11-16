@@ -10,6 +10,5 @@ import lombok.experimental.SuperBuilder;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ProfesionResponse extends ProfesionRequest {
-    private Integer id;
     private String status;
 }

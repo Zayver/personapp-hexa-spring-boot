@@ -8,7 +8,11 @@ import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring",
+    uses = {
+        PersonaMapper.class, ProfesionMapper.class
+    }
+)
 public interface EstudiosMapper {
 
     @Mapping(target = "fecha", source = "study.graduationDate")

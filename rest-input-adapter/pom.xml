@@ -74,6 +74,7 @@
 				<version>${global.springframework.boot.version}</version>
 				<configuration>
 					<mainClass>co.edu.javeriana.as.personapp.PersonAppRestApi</mainClass>
+
 					<layout>JAR</layout>
 					<excludes>
 						<exclude>
@@ -90,6 +91,8 @@
 					</execution>
 				</executions>
 			</plugin>
+
+
 		</plugins>
 	</build>
 </project>

@@ -26,7 +26,8 @@ public class ProfessionOutputAdapterMaria implements ProfessionOutputPort {
 
     @Override
     public Profession save(Profession profession) {
-        ProfesionEntity dom = profesionRepository.save(profesionMapper.fromDomainToAdapter(profession));
+        val entity = profesionMapper.fromDomainToAdapter(profession);
+        ProfesionEntity dom = profesionRepository.save(entity);
         return profesionMapper.fromAdapterToDomain(dom);
     }
 

@@ -30,22 +30,6 @@ services:
       - ./scripts/persona_ddl_mongo.js:/docker-entrypoint-initdb.d/persona_ddl_mongo.js:ro
       - ./scripts/persona_dml_mongo.js:/docker-entrypoint-initdb.d/persona_dml_mongo.js:ro
 
-  rest:
-    hostname: rest
-    build:
-      dockerfile: Dockerfile
-    networks:
-      - lab
-    ports:
-      - "8080:8080"
-
-  cli:
-    hostname: cli
-    build:
-      dockerfile: Dockerfile.cli
-    networks:
-      - lab
-
 
 networks:
   lab:
